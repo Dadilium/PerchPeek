@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     left: 0,
     borderTopEndRadius: 20,
     borderTopStartRadius: 20,
-    backgroundColor: 'white',
+    backgroundColor: 'white'
   },
   scrollView: {
     marginVertical: 16,
