@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
+  mapContainer: {
     width: '100%',
-    height: '100%'
+    height: '100%',
   },
   landmarksContainer: {
     position: 'absolute',
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     right: 0, 
     borderTopEndRadius: 20,
     borderTopStartRadius: 20,
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   scrollView: {
     marginVertical: 16,

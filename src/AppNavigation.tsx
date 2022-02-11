@@ -1,10 +1,8 @@
 
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
 import { StackScreenProps } from '@react-navigation/stack';
-import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
-
+import { createSharedElementStackNavigator, SharedElementCompatRoute } from 'react-navigation-shared-element';
 import MapDisplay from './views/MapDisplay';
 import Details from './views/Details';
 import { Landmark } from './constants';
@@ -24,11 +22,14 @@ export default function AppNavigation() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="MapDisplay" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="MapDisplay" component={MapDisplay} />
-        <Stack.Screen name="Details" component={Details} sharedElements={(route, otherRoute, showing) => {
+        <Stack.Screen name="Details" component={Details} sharedElements={(route: SharedElementCompatRoute) => {
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+          const landmark: Landmark = route.params.landmark;
+
           return [{
-            id: `item.${route.params.landmark.id}`,
+            id: `item.${landmark.id}`,
             animation: 'move',
-            resize: 'clip'
+            resize: 'clip',
           }];
         }} />
       </Stack.Navigator>

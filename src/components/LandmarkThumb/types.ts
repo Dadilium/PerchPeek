@@ -1,4 +1,4 @@
-import { Landmark } from "../../constants";
+import { Landmark } from '../../constants';
 
 export type LandmarkThumbProps = {
   onPress: () => void,

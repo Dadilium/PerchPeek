@@ -8,11 +8,9 @@ import { MapProps, RefMap } from './types';
 const Map = forwardRef((props: MapProps, ref: Ref<RefMap>) => {
   const { container } = styles;
   const { landmarks, onSelection } = props;
-  const [selectedLandmark, setSelectedLandmark] = useState(0)
-
+  const [selectedLandmark, setSelectedLandmark] = useState(0);
+  const changeLandmark = (landmarkId: number) => { setSelectedLandmark(landmarkId); };
   useImperativeHandle(ref, () => ({ changeLandmark }));
-
-  const changeLandmark = (landmarkId: number) => { setSelectedLandmark(landmarkId); }
 
   return (
     <MapView
@@ -24,7 +22,6 @@ const Map = forwardRef((props: MapProps, ref: Ref<RefMap>) => {
           key={landmark.id}
           landmark={landmark}
           isSelected={selectedLandmark === landmark.id}
-          isHearted={false}
           onPress={() => onSelection(landmark)}
         />
       ))}
@@ -32,4 +29,5 @@ const Map = forwardRef((props: MapProps, ref: Ref<RefMap>) => {
   );
 });
 
+Map.displayName = 'Map';
 export default Map;

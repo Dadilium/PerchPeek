@@ -13,7 +13,7 @@ import LandmarkThumbStyles from '../../components/LandmarkThumb/styles';
 import styles from './styles';
 
 const MapDisplay = ({ navigation }: HomeScreenNavigationProp) => {
-  const { container, landmarksContainer, scrollView } = styles;
+  const { mapContainer, landmarksContainer, scrollView } = styles;
   const landmarks: Array<Landmark> = useSelector((state: RootState) => state.landmarks);
   const [dataSourceCords, setDataSourceCords] = useState<Array<number>>([]);
   const [scrollViewRef, setScrollViewRef] = useState<ScrollView | null>();
@@ -24,12 +24,14 @@ const MapDisplay = ({ navigation }: HomeScreenNavigationProp) => {
     const { container } = LandmarkThumbStyles;
     const ToX = (landmark.id - 1) * (container.width + container.marginHorizontal);
 
-    scrollViewRef?.scrollTo({x: ToX, animated: true});
-    mapRef?.current?.changeLandmark(landmark.id)
+    scrollViewRef?.scrollTo({
+      x: ToX, animated: true,
+    });
+    mapRef?.current?.changeLandmark(landmark.id);
   };
 
   return (
-    <View style={container}>
+    <View style={mapContainer}>
       <Map
         ref={(map: RefMap) => mapRef.current = map}
         landmarks={landmarks}

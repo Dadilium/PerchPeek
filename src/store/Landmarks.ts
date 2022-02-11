@@ -1,15 +1,16 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Landmark } from '../constants';
 
 const landmarkSlice = createSlice({
-  name: "landmark",
+  name: 'landmark',
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   initialState: require('./data/londonLandmarks.json') as Array<Landmark>,
   reducers: {
-    setLandmarkHeart: (state, action: PayloadAction<{index: number}>) => {
+    setLandmarkHeart: (state, action: PayloadAction<{ index: number }>) => {
       state[action.payload.index].hearted = !state[action.payload.index].hearted;
     },
-  }
-})
+  },
+});
 
-export const { setLandmarkHeart } = landmarkSlice.actions
+export const { setLandmarkHeart } = landmarkSlice.actions;
 export default landmarkSlice.reducer;

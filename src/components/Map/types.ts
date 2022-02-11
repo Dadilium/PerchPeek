@@ -7,4 +7,4 @@ export type MapProps = {
 
 export interface RefMap {
   changeLandmark: (landmarkId: number) => void,
-};
+}

@@ -9,8 +9,9 @@ const persistConfig = {
 };
 
 const reducers = combineReducers({
-  landmarks: landmarkReducer
+  landmarks: landmarkReducer,
 });
+
 export const store = configureStore({
   reducer: persistReducer(persistConfig, reducers),
   middleware: (getDefaultMiddleware) =>
@@ -22,5 +23,5 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
-export type RootState = ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof reducers>;
 export type AppDispatch = typeof store.dispatch;

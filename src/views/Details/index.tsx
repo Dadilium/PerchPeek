@@ -10,11 +10,15 @@ import { setLandmarkHeart } from '../../store/Landmarks';
 import { RootState } from '../../store';
 import styles from './styles';
 
-const Details = ({navigation, route}: DetailsNavigationProp) => {
+const Details = ({
+  navigation, route,
+}: DetailsNavigationProp) => {
   const { container, topRightCorner, imageSize, detailContainer, titleLabel } = styles;
   const dispatch = useDispatch();
   const { landmark } = route.params;
-  const isLandmarkHearted: boolean = useSelector((state: RootState) => state.landmarks[landmark.id - 1].hearted);
+  const isLandmarkHearted: boolean = useSelector(
+    (state: RootState) => state.landmarks[landmark.id - 1].hearted || false,
+  );
 
   return (
     <ScrollView style={container}>
