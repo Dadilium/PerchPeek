@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     left: 0,
+    right: 0, 
     borderTopEndRadius: 20,
     borderTopStartRadius: 20,
     backgroundColor: 'white'

@@ -22,7 +22,7 @@ const Stack = createSharedElementStackNavigator();
 export default function AppNavigation() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="MapDisplay">
+      <Stack.Navigator initialRouteName="MapDisplay" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="MapDisplay" component={MapDisplay} />
         <Stack.Screen name="Details" component={Details} sharedElements={(route, otherRoute, showing) => {
           return [{

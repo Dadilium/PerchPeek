@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   topRightCorner: {
     position: 'absolute',
     right: 10,
-    top: 10,
+    top: 40,
   },
   imageSize: {
     width: Dimensions.get('screen').width,
