@@ -14,7 +14,7 @@ import styles from './styles';
 
 const MapDisplay = ({ navigation }: HomeScreenNavigationProp) => {
   const { container, landmarksContainer, scrollView } = styles;
-  const landmarks = useSelector((state: RootState) => state.landmarks);
+  const landmarks: Array<Landmark> = useSelector((state: RootState) => state.landmarks);
   const [dataSourceCords, setDataSourceCords] = useState<Array<number>>([]);
   const [scrollViewRef, setScrollViewRef] = useState<ScrollView | null>();
   const mapRef = useRef<RefMap>();
@@ -26,7 +26,8 @@ const MapDisplay = ({ navigation }: HomeScreenNavigationProp) => {
 
     scrollViewRef?.scrollTo({x: ToX, animated: true});
     mapRef?.current?.changeLandmark(landmark.id)
-  }
+  };
+
   return (
     <View style={container}>
       <Map
