@@ -7,7 +7,7 @@ import { LandmarkThumbProps, RefLandmarkThumb } from './types';
 
 const LandmarkThumb = forwardRef((props: LandmarkThumbProps, ref: Ref<RefLandmarkThumb>) => {
   const { container, imageSize, label, rounded, topRightCorner } = styles;
-  const { onPress, landmark } = props;
+  const { onPress, onHeartPress, landmark } = props;
   const [viewPos, setViewPos] = useState<null | { x: number, y: number }>(null)
   // const posAnim = useRef(new Animated.ValueXY()).current;
   const widthAnim = useRef(new Animated.Value(container.width)).current;
@@ -86,7 +86,7 @@ const LandmarkThumb = forwardRef((props: LandmarkThumbProps, ref: Ref<RefLandmar
           { width: widthAnim, height: heightAnim }
         ]}>
         <ImageBackground source={{ uri: landmark.image }} style={imageSize} imageStyle={rounded}>
-          <HeartButton onPress={() => { }} customStyle={topRightCorner} />
+          <HeartButton onPress={onHeartPress} customStyle={topRightCorner} isHearted={landmark.hearted || false}/>
           <Text style={label}>{landmark.name}</Text>
         </ImageBackground>
       </Animated.View>

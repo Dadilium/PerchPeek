@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     borderRadius: 3,
   },
   imageSize: {
-    flex: 1,
+    flex: imageRatio,
     // width: 200,
     // height: 200 * imageRatio,
   },

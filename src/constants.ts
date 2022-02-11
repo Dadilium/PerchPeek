@@ -7,6 +7,7 @@ export type Landmark = {
   },
   description: string,
   image: string,
+  hearted?: boolean,
 };
 
 export const startingLocation = {

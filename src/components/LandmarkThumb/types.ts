@@ -1,6 +1,9 @@
+import { Landmark } from "../../constants";
+
 export type LandmarkThumbProps = {
   onPress: () => void,
-  landmark: any,
+  onHeartPress: () => void,
+  landmark: Landmark,
 };
 
 export interface RefLandmarkThumb {

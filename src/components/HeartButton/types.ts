@@ -4,4 +4,5 @@ export type HeartButtonProps = {
   onPress: () => void,
   isLarge?: boolean,
   customStyle: ViewStyle,
+  isHearted: boolean,
 };

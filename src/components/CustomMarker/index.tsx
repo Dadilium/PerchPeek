@@ -15,7 +15,7 @@ const CustomMarker = (props: CustomMarkerProps) => {
       onPress={onPress}
     >
       <Icon name={'map-marker'} size={50} color={markerColor} />
-      {isHearted
+      {landmark.hearted
         && <Icon name={'heart'} size={18} color={'red'} style={heart} />
       }
     </Marker>

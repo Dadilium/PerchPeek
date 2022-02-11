@@ -6,12 +6,14 @@ import { HeartButtonProps } from './types';
 
 const HeartButton = (props: HeartButtonProps) => {
   const { container, large, small } = styles;
-  const { onPress, isLarge, customStyle } = props;
+  const { onPress, isLarge, customStyle, isHearted } = props;
+  const iconSize = isLarge ? 30 : 18;
+  const iconName = isHearted ? 'heart' : 'heart-outline';
 
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={[container, customStyle, isLarge ? large : small]}>
-        <Icon name={'heart-outline'} size={isLarge ? 30 : 18} color={'red'} />
+        <Icon name={iconName} size={iconSize} color={'red'} />
       </View>
     </TouchableOpacity>
   );
