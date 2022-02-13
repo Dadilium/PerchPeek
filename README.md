@@ -20,7 +20,7 @@ How to run android
 4. Run the command `npx react-native run-android`
 
 **Note**: 
-* It has been noticed that the map may not display itself on certain emulator (due to google services not being setup on the emulator), if it happens, try to launch the app on a different emulator or on a hardware. Issue happened on Android emulator API 30 & Android 11.0
+* It has been noticed that the map may not display itself on certain emulator (due to google services not being setup on the emulator), if it happens, try to launch the app on a different emulator or on a hardware. Issue happened on Android emulator API 30 & Android 11.0.
 * If using a hardware, make sure to check that your device is connected to the internet, it will avoid you spending 30 minutes trying to debug an issue that doesn't exist. (that was the little anecdote of the document)
 
 How to run iOS
