@@ -31,13 +31,12 @@ it('all landmarks are on the map', () => {
 
 it('the list contains all the landmarks', () => {
   const state = store.getState();
-  const { getByTestId, toJSON } = render(
+  const { getByTestId } = render(
     <Provider store={store}>
       <MapDisplay />
     </Provider>
   );
 
-  expect(toJSON()).toMatchSnapshot();
   state.landmarks.map((landmark) => {
     const item = getByTestId(`landmark-item-label-${landmark.id}`);
     expect(item.children[0]).toBe(landmark.name);

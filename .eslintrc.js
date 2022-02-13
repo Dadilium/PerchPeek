@@ -6,10 +6,12 @@ module.exports = {
   extends: [
     'airbnb-typescript/base',
     'plugin:react/recommended',
-    "plugin:import/recommended",
+    'plugin:import/recommended',
+    '@react-native-community',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
+  
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -48,6 +50,7 @@ module.exports = {
     'max-len': ['error', {
       code: 120
     }],
+    '@typescript-eslint/indent': 'off'
   },
   overrides: [{
     files: ['**/*.{tsx, ts}'],

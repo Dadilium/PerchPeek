@@ -1,11 +1,15 @@
 PerchPeek Challenge
 =======
 
-versions used locally
+Versions used locally
 -----------
 **Node**: v17.4.0
 **Yarn**: 1.22.10
 
+Useful commands
+-----------
+* `yarn lint`: runs ESlint
+* `yarn test`: runs the unit tests
 
 How to run android
 -----------
@@ -35,6 +39,5 @@ Difficulties
 
 Incomplete parts
 -----------
-
 * _Test the navigation between the two views_: Due to some issues I faced with the library `react-navigation-shared-element`, I decided not to render the whole app for tests, but only the first view. By not having `StackNavigator` in my rendered object, I ommited this test.
 * _Test scrollview ScrollTo function_: I was unable to locate the Scrollview offset position for the to programmatically check if the scrollview had scrolled or not.
