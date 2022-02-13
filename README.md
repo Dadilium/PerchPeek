@@ -19,8 +19,11 @@ How to run android
 3. (Recommended only) Make sure to have an emulator launched
 4. Run the command `npx react-native run-android`
 
-**Note**: 
+**Troubleshooting**:
+* If the error `java.lang.OutOfMemoryError (no error message)` appears while trying to run the app, please access the `gradle.properties` file and uncomment the line 13 which contains the variable `org.gradle.jvmargs`.
 * It has been noticed that the map may not display itself on certain emulator (due to google services not being setup on the emulator), if it happens, try to launch the app on a different emulator or on a hardware. Issue happened on Android emulator API 30 & Android 11.0.
+
+**Note**:  
 * If using a hardware, make sure to check that your device is connected to the internet, it will avoid you spending 30 minutes trying to debug an issue that doesn't exist. (that was the little anecdote of the document)
 
 How to run iOS
@@ -33,6 +36,7 @@ How to run iOS
 
 **Note**: 
 * By running the application using Xcode, you may be required to clean the build folder
+* Make sure that the project is located on a folder which `yarn` & `pod install` can have access.
 
 Difficulties
 -----------
