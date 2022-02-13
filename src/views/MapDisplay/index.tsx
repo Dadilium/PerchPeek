@@ -1,13 +1,12 @@
 import React, { useRef, useState } from 'react';
 import { View, ScrollView } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { HomeScreenNavigationProp } from '../../AppNavigation';
 import { RootState } from '../../store/index';
 import LandmarkThumb from '../../components/LandmarkThumb';
 import { setLandmarkHeart } from '../../store/Landmarks';
 import { RefMap } from '../../components/Map/types';
 import Map from '../../components/Map';
-import { Landmark } from '../../constants';
+import { Landmark, HomeScreenNavigationProp } from '../../types';
 import LandmarkThumbStyles from '../../components/LandmarkThumb/styles';
 import styles from './styles';
 
@@ -22,6 +21,7 @@ const MapDisplay = ({ navigation }: HomeScreenNavigationProp) => {
   const mapRef = useRef<RefMap>();
   const dispatch = useDispatch();
 
+  // handle scrollview scrollTo and modify Marker status
   const onMarkerPressed = (landmark: Landmark) => {
     const { container } = LandmarkThumbStyles;
     const ToX =

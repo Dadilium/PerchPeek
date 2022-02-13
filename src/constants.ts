@@ -1,15 +1,3 @@
-export type Landmark = {
-  id: number;
-  name: string;
-  latlng: {
-    latitude: number;
-    longitude: number;
-  };
-  description: string;
-  image: string;
-  hearted?: boolean;
-};
-
 export const startingLocation = {
   latitude: 51.500782626551675,
   longitude: -0.10652662330828043,

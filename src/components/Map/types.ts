@@ -1,4 +1,4 @@
-import { Landmark } from '../../constants';
+import { Landmark } from '../../types';
 
 export type MapProps = {
   landmarks: Array<Landmark>;

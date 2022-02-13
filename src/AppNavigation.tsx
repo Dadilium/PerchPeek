@@ -1,27 +1,12 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { StackScreenProps } from '@react-navigation/stack';
 import {
   createSharedElementStackNavigator,
   SharedElementCompatRoute,
 } from 'react-navigation-shared-element';
 import MapDisplay from './views/MapDisplay';
 import Details from './views/Details';
-import { Landmark } from './constants';
-
-export type RootStackParamList = {
-  MapDisplay: undefined;
-  Details: { landmark: Landmark };
-};
-
-export type HomeScreenNavigationProp = StackScreenProps<
-  RootStackParamList,
-  'MapDisplay'
->;
-export type DetailsNavigationProp = StackScreenProps<
-  RootStackParamList,
-  'Details'
->;
+import { Landmark } from './types';
 
 const Stack = createSharedElementStackNavigator();
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, ImageBackground, ScrollView } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import HeartButton from '../../components/HeartButton';
-import { DetailsNavigationProp } from '../../AppNavigation';
+import { DetailsNavigationProp } from '../../types';
 import BackNavigationButton from '../../components/BackNavigationButton';
 import { SharedElement } from 'react-navigation-shared-element';
 import { setLandmarkHeart } from '../../store/Landmarks';

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Landmark } from '../constants';
+import { Landmark } from '../types';
 
 const landmarkSlice = createSlice({
   name: 'landmark',
