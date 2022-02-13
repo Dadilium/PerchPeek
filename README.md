@@ -1,5 +1,6 @@
 PerchPeek Challenge
 =======
+_Time spent on the test_: about 25 hours
 
 Versions used locally
 -----------
@@ -32,7 +33,7 @@ How to run iOS
 
 Difficulties
 -----------
-**Note**: This was the most difficult challenge I have ever had to complete, but also the most interesting.
+**Note**: This was the most difficult challenge I have ever had to complete for an interview process, but also the most interesting.
 
 * _Shared Element Transition_: I had never used this transition in the past and didn't know its name. It resulted in me going to the wrong direction and trying to reproduce the 'expand' effect manually. I spent a large amount of time on this part for me to realise that it is an 'official' navigation transition. I restructured my code and implemented the library.
 * _Testing Library_: I am not going to lie, writting tests is probably my weakest spot. Even thought I am confortable to write simple tests, this challenge requested a better test writting skills.
