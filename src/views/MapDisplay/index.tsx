@@ -32,7 +32,7 @@ const MapDisplay = ({ navigation }: HomeScreenNavigationProp) => {
   return (
     <View style={mapContainer}>
       <Map
-        ref={(map: RefMap) => mapRef.current = map}
+        ref={(map: RefMap) => { mapRef.current = map; }}
         landmarks={landmarks}
         onSelection={(landmark) => onMarkerPressed(landmark)}
       />

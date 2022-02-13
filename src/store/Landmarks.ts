@@ -7,7 +7,6 @@ const landmarkSlice = createSlice({
   initialState: require('./data/londonLandmarks.json') as Array<Landmark>,
   reducers: {
     setLandmarkHeart: (state, action: PayloadAction<{ index: number }>) => {
-      console.log("here");
       state[action.payload.index].hearted = !state[action.payload.index].hearted;
     },
   },

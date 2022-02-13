@@ -14,7 +14,7 @@ How to run android
 3. (Recommended only) Make sure to have an emulator launched
 4. Run the command `npx react-native run-android`
 
-_Note_: 
+**Note**: 
 * It has been noticed that the map may not display itself on certain emulator (due to google services not being setup on the emulator), if it happens, try to launch the app on a different emulator or on a hardware.
 * If using a hardware, make sure to check that your device is connected to the internet, it will avoid you spending 30 minutes trying to debug an issue that doesn't exist. (that was the little anecdote of the document)
 

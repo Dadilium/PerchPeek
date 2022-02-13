@@ -1,5 +1,5 @@
 import React, { useState, useImperativeHandle, Ref } from 'react';
-import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+import MapView from 'react-native-maps';
 import CustomMarker from '../CustomMarker';
 import { startingLocation } from '../../constants';
 import styles from './styles';
@@ -16,7 +16,6 @@ const Map = React.forwardRef((props: MapProps, ref: Ref<RefMap>) => {
     <MapView
       style={container}
       initialRegion={startingLocation}
-      // provider={PROVIDER_GOOGLE}
     >
       {landmarks.map((landmark) => (
         <CustomMarker
