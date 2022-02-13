@@ -5,4 +5,5 @@ export type HeartButtonProps = {
   isLarge?: boolean,
   customStyle: ViewStyle,
   isHearted: boolean,
+  testID?: string,
 };

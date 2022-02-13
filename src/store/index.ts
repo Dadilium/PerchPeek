@@ -8,7 +8,7 @@ const persistConfig = {
   storage: AsyncStorage,
 };
 
-const reducers = combineReducers({
+export const reducers = combineReducers({
   landmarks: landmarkReducer,
 });
 

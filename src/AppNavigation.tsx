@@ -1,5 +1,4 @@
-
-import * as React from 'react';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { StackScreenProps } from '@react-navigation/stack';
 import { createSharedElementStackNavigator, SharedElementCompatRoute } from 'react-navigation-shared-element';

@@ -6,12 +6,13 @@ import { CustomMarkerProps } from './types';
 
 const CustomMarker = (props: CustomMarkerProps) => {
   const { heart } = styles;
-  const { landmark, isSelected, onPress } = props;
+  const { landmark, isSelected, testID, onPress } = props;
   const markerColor = isSelected ? '#2080c9' : 'grey';
 
   return (
     <Marker
       coordinate={{ latitude: landmark.latlng.latitude, longitude: landmark.latlng.longitude }}
+      testID={testID}
       onPress={onPress}
     >
       <Icon name={'map-marker'} size={50} color={markerColor} />

@@ -11,16 +11,34 @@ const LandmarkThumb = (props: LandmarkThumbProps) => {
 
   return (
     <SharedElement id={`item.${landmark.id}`}>
-      <TouchableOpacity onPress={onPress}>
+      <TouchableOpacity
+        onPress={onPress}
+        testID={`landmark-item-${landmark.id}`}
+      >
         <View
           style={container}
           onLayout={(event: LayoutChangeEvent) => {
             onLayout(event.nativeEvent.layout.x);
           }}
         >
-          <ImageBackground source={{ uri: landmark.image }} style={imageSize} imageStyle={rounded}>
-            <HeartButton onPress={onHeartPress} customStyle={topRightCorner} isHearted={landmark.hearted || false} />
-            <Text style={label}>{landmark.name}</Text>
+          <ImageBackground
+            testID={`landmark-item-image-${landmark.id}`}
+            source={{ uri: landmark.image }}
+            style={imageSize}
+            imageStyle={rounded}
+          >
+            <HeartButton
+              onPress={onHeartPress}
+              customStyle={topRightCorner}
+              isHearted={landmark.hearted || false}
+              testID={`heartbutton-${landmark.id}`}
+            />
+            <Text
+              style={label}
+              testID={`landmark-item-label-${landmark.id}`}
+            >
+              {landmark.name}
+            </Text>
           </ImageBackground>
         </View>
       </TouchableOpacity>

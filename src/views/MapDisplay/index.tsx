@@ -1,4 +1,3 @@
-
 import React, { useRef, useState } from 'react';
 import { View, ScrollView } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
@@ -39,6 +38,7 @@ const MapDisplay = ({ navigation }: HomeScreenNavigationProp) => {
       />
       <View style={landmarksContainer}>
         <ScrollView
+          testID="landmarks-list"
           ref={(ref) => setScrollViewRef(ref)}
           style={scrollView}
           horizontal
