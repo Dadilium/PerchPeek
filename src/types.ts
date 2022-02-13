@@ -1,4 +1,4 @@
-import { StackScreenProps } from '@react-navigation/stack';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 export type Landmark = {
   id: number;
@@ -17,11 +17,11 @@ export type RootStackParamList = {
   Details: { landmark: Landmark };
 };
 
-export type HomeScreenNavigationProp = StackScreenProps<
+export type HomeScreenNavigationProp = NativeStackScreenProps<
   RootStackParamList,
   'MapDisplay'
 >;
-export type DetailsNavigationProp = StackScreenProps<
+export type DetailsNavigationProp = NativeStackScreenProps<
   RootStackParamList,
   'Details'
 >;
