@@ -1,7 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import landmarkReducer from './Landmarks';
 import AsyncStorage from '@react-native-community/async-storage';
-import { persistStore, persistReducer, REHYDRATE, PERSIST } from 'redux-persist';
+import {
+  persistStore,
+  persistReducer,
+  REHYDRATE,
+  PERSIST,
+} from 'redux-persist';
 
 const persistConfig = {
   key: 'root',

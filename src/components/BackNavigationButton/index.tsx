@@ -14,7 +14,6 @@ const BackNavigationButton = (props: BackNavigationButtonProps) => {
         <Icon name={'chevron-down'} size={50} color={'blue'} />
       </View>
     </TouchableOpacity>
-
   );
 };
 

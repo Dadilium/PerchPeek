@@ -9,13 +9,13 @@ import { setLandmarkHeart } from '../../store/Landmarks';
 import { RootState } from '../../store';
 import styles from './styles';
 
-const Details = ({
-  navigation, route,
-}: DetailsNavigationProp) => {
-  const { container, topRightCorner, imageSize, detailContainer, titleLabel } = styles;
+const Details = ({ navigation, route }: DetailsNavigationProp) => {
+  const { container, topRightCorner, imageSize, detailContainer, titleLabel } =
+    styles;
   const dispatch = useDispatch();
   const { landmark } = route.params;
   const isLandmarkHearted: boolean = useSelector(
+    // eslint-disable-next-line prettier/prettier
     (state: RootState) => state.landmarks[landmark.id - 1].hearted || false,
   );
 
@@ -25,7 +25,9 @@ const Details = ({
         <View>
           <ImageBackground source={{ uri: landmark.image }} style={imageSize}>
             <HeartButton
-              onPress={() => dispatch(setLandmarkHeart({ index: landmark.id - 1 }))}
+              onPress={() => {
+                dispatch(setLandmarkHeart({ index: landmark.id - 1 }));
+              }}
               customStyle={topRightCorner}
               isHearted={isLandmarkHearted || false}
               isLarge

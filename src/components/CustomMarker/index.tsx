@@ -11,14 +11,17 @@ const CustomMarker = (props: CustomMarkerProps) => {
 
   return (
     <Marker
-      coordinate={{ latitude: landmark.latlng.latitude, longitude: landmark.latlng.longitude }}
+      coordinate={{
+        latitude: landmark.latlng.latitude,
+        longitude: landmark.latlng.longitude,
+      }}
       testID={testID}
       onPress={onPress}
     >
       <Icon name={'map-marker'} size={50} color={markerColor} />
-      {landmark.hearted
-        && <Icon name={'heart'} size={18} color={'red'} style={heart} />
-      }
+      {landmark.hearted && (
+        <Icon name={'heart'} size={18} color={'red'} style={heart} />
+      )}
     </Marker>
   );
 };

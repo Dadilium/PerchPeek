@@ -9,14 +9,13 @@ const Map = React.forwardRef((props: MapProps, ref: Ref<RefMap>) => {
   const { container } = styles;
   const { landmarks, onSelection } = props;
   const [selectedLandmark, setSelectedLandmark] = useState(0);
-  const changeLandmark = (landmarkId: number) => { setSelectedLandmark(landmarkId); };
+  const changeLandmark = (landmarkId: number) => {
+    setSelectedLandmark(landmarkId);
+  };
   useImperativeHandle(ref, () => ({ changeLandmark }));
 
   return (
-    <MapView
-      style={container}
-      initialRegion={startingLocation}
-    >
+    <MapView style={container} initialRegion={startingLocation}>
       {landmarks.map((landmark) => (
         <CustomMarker
           key={landmark.id}

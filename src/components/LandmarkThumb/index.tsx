@@ -1,5 +1,11 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ImageBackground, LayoutChangeEvent } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ImageBackground,
+  LayoutChangeEvent,
+} from 'react-native';
 import HeartButton from '../HeartButton';
 import { SharedElement } from 'react-navigation-shared-element';
 import styles from './styles';
@@ -33,10 +39,7 @@ const LandmarkThumb = (props: LandmarkThumbProps) => {
               isHearted={landmark.hearted || false}
               testID={`heartbutton-${landmark.id}`}
             />
-            <Text
-              style={label}
-              testID={`landmark-item-label-${landmark.id}`}
-            >
+            <Text style={label} testID={`landmark-item-label-${landmark.id}`}>
               {landmark.name}
             </Text>
           </ImageBackground>
